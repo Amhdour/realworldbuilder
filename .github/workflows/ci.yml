@@ -9,4 +9,6 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -e ".[dev]"
-      - run: pytest
+      - run: pytest -q
+      - run: python -m realworldbuilder scan tests/fixtures/sample_repo --output /tmp/rwb_verify
+      - run: python -m realworldbuilder compare --before /tmp/rwb_verify --after /tmp/rwb_verify
