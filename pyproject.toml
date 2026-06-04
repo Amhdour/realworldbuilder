@@ -17,3 +17,8 @@ realworldbuilder = "realworldbuilder.cli:app"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+[tool.setuptools.packages.find]
+include = ["realworldbuilder*"]
+
+[tool.setuptools.package-data]
+realworldbuilder = ["report_templates/*.j2"]
