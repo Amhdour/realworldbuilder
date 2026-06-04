@@ -1,0 +1,15 @@
+# Public Portfolio Summary
+
+{{ public_portfolio_summary.summary }}
+
+## Safe claims
+{% for c in public_portfolio_summary.safe_claims %}- {{ c }}
+{% endfor %}
+
+## Public-safe evidence summaries
+{% for e in public_portfolio_summary.public_safe_evidence %}- {{ e.evidence_file }}: {{ e.safe_public_wording }}
+{% else %}- {{ unconfirmed }}
+{% endfor %}
+
+## What is not claimed
+No enterprise readiness, production readiness, compliance, certification, or complete security is claimed.

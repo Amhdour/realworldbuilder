@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "realworldbuilder"
+version = "0.1.0"
+description = "Local evidence-first readiness builder for RAG and autonomous-agent repositories."
+requires-python = ">=3.11"
+dependencies = ["typer", "rich", "pydantic", "jinja2", "pyyaml"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+realworldbuilder = "realworldbuilder.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

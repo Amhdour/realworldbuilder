@@ -1,0 +1,22 @@
+# Threat-Control Matrix
+
+{% for i in threat_control_matrix.items %}## {{ i.threat }}
+- Required control: {{ i.required_control }}
+- Candidate patch point: {{ i.candidate_patch_point }}
+- Required policy rule: {{ i.required_policy_rule }}
+- Required test: {{ i.required_test }}
+- Required demo attack: {{ i.required_demo_attack }}
+- Required audit event: {{ i.required_audit_event }}
+- Required telemetry metric: {{ i.required_telemetry_metric }}
+- Required evidence file: {{ i.required_evidence_file }}
+- Current status: {{ i.current_status }}
+- Evidence strength level: {{ i.evidence_strength_level }}
+- Control maturity level: {{ i.control_maturity_level }}
+- Safe public claim: {{ i.safe_public_claim }}
+{% endfor %}
+
+## MVP / production-style portfolio work
+Local tests, demo attacks, CI gates, evidence reports, and safe public claims.
+
+## Later enterprise work
+Staging validation, monitoring stack, backup/restore validation, rollback drills, SSO/SCIM integration, external audit, compliance certification, customer-specific deployment hardening.

@@ -1,0 +1,13 @@
+# Supply-chain Indicators
+
+{% for i in supply_chain_indicators.indicators %}- {{ i }}
+{% else %}- {{ unconfirmed }}
+{% endfor %}
+
+Limitation: {{ supply_chain_indicators.phase_1_limitation }}
+
+## MVP / production-style portfolio work
+Record package manifests, lock files, license files, Docker files, and SBOM indicators when present.
+
+## Later enterprise work
+Add vulnerability scanning, signed provenance, and external validation outside Phase 1.

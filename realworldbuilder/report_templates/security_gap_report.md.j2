@@ -1,0 +1,15 @@
+# Security Gap Report
+
+{% for g in security_gap_report.gaps %}## {{ g.area }}
+- Status: {{ g.status }}
+- Severity: {{ g.severity }}
+- Exploitability: {{ g.exploitability }}
+- Evidence impact: {{ g.evidence_impact }}
+- Recommended next action: {{ g.recommended_next_action }}
+{% endfor %}
+
+## MVP / production-style portfolio work
+Local tests, demo attacks, CI gates, evidence reports, safe public claims.
+
+## Later enterprise work
+Staging validation, monitoring stack, backup/restore validation, rollback drills, SSO/SCIM integration, external audit, compliance certification, customer-specific deployment hardening.

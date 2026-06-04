@@ -1,0 +1,36 @@
+# Known Limitations
+
+## What the scanner could not confirm
+{% for x in known_limitations.cannot_confirm %}- {{ x }}
+{% endfor %}
+## What requires manual code review
+{% for x in known_limitations.manual_code_review %}- {{ x }}
+{% endfor %}
+## What requires running tests
+{% for x in known_limitations.requires_running_tests %}- {{ x }}
+{% endfor %}
+## What requires CI logs
+{% for x in known_limitations.requires_ci_logs %}- {{ x }}
+{% endfor %}
+## What requires deployment/staging validation
+{% for x in known_limitations.requires_staging_validation %}- {{ x }}
+{% endfor %}
+## What requires external validation
+{% for x in known_limitations.requires_external_validation %}- {{ x }}
+{% endfor %}
+## What must not be claimed yet
+{% for x in known_limitations.must_not_claim_yet %}- {{ x }}
+{% endfor %}
+## What the scanner intentionally does not do in Phase 1
+{% for x in known_limitations.phase_1_intentionally_does_not_do %}- {{ x }}
+{% endfor %}
+## Report safety rewrites performed
+{% for x in known_limitations.safety_rewrites %}- {{ x }}
+{% else %}- No safety rewrites were required after validation.
+{% endfor %}
+
+## MVP / production-style portfolio work
+Local tests, demo attacks, CI gates, evidence reports, safe public claims.
+
+## Later enterprise work
+Staging validation, monitoring stack, backup/restore validation, rollback drills, SSO/SCIM integration, external audit, compliance certification, customer-specific deployment hardening.

@@ -1,0 +1,23 @@
+# Codex Next Tasks
+
+{% for t in codex_next_tasks.tasks %}## {{ loop.index }}. {{ t.objective }}
+- Files to inspect: {{ t.files_to_inspect }}
+- Files to modify: {{ t.files_to_modify }}
+- Implementation steps: {{ t.implementation_steps }}
+- Tests to add: {{ t.tests_to_add }}
+- Demo attack to add: {{ t.demo_attack_to_add }}
+- Evidence to generate: {{ t.evidence_to_generate }}
+- Acceptance criteria: {{ t.acceptance_criteria }}
+- Safe claim after completion: {{ t.safe_claim_after_completion }}
+- Risk level: {{ t.risk_level }}
+- Reason: {{ t.reason }}
+- Rollback plan: {{ t.rollback_plan }}
+- Files most likely affected: {{ t.files_most_likely_affected }}
+- Tests required before merge: {{ t.tests_required_before_merge }}
+{% endfor %}
+
+## MVP / production-style portfolio work
+Prioritize local tests, demo attacks, CI gates, evidence reports, and safe public claims.
+
+## Later enterprise work
+Staging validation, monitoring stack, backup/restore validation, rollback drills, SSO/SCIM integration, external audit, compliance certification.
