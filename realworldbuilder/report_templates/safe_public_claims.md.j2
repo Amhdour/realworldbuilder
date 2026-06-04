@@ -1,0 +1,14 @@
+# Safe Public Claims
+
+{% for c in safe_public_claims.claims %}## {{ c.area }}
+- Unsafe claim: {{ c.unsafe_claim }}
+- Why it is unsafe: {{ c.why_it_is_unsafe }}
+- Safer claim: {{ c.safer_claim }}
+- Evidence required to upgrade the claim: {{ c.evidence_required_to_upgrade }}
+{% endfor %}
+
+## MVP / production-style portfolio work
+Only use safe public claims supported by local evidence.
+
+## Later enterprise work
+Requires external validation before stronger enterprise claims.

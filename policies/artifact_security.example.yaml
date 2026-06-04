@@ -1,0 +1,2 @@
+control: artifact_security
+rule: validate uploads and redact secrets before publishing artifacts

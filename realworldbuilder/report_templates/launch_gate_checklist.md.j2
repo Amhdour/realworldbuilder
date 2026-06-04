@@ -1,0 +1,8 @@
+# Launch Gate Checklist
+
+{% for g in launch_gate_checklist.gates %}## {{ g.name }}
+- Status: {{ g.status }}
+- MVP / production-style portfolio work: {{ g.mvp_work }}
+- Later enterprise work: {{ g.later_enterprise_work }}
+- Safe claim: {{ g.safe_claim }}
+{% endfor %}

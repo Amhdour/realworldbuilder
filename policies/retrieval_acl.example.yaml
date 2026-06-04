@@ -1,0 +1,2 @@
+control: retrieval_acl
+rule: require tenant_id and subject permissions before returning retrieved chunks

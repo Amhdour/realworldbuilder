@@ -1,0 +1,2 @@
+control: mcp_hardening
+rule: bind MCP identity, tenant scope, and tool permissions

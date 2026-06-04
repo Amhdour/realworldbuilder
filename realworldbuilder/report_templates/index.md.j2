@@ -1,0 +1,13 @@
+# RealWorldBuilder Report Index
+
+This report is evidence-first. It does not prove enterprise readiness.
+
+{% for r in ['repo_fingerprint','architecture_map','patch_points','threat_control_matrix','security_gap_report','readiness_score','launch_gate_checklist','evidence_index','safe_public_claims','public_portfolio_summary','codex_next_tasks','read_only_verification','supply_chain_indicators','known_limitations'] -%}
+- [{{ r }}.md]({{ r }}.md)
+{% endfor %}
+
+## MVP / production-style portfolio work
+Local tests, demo attacks, CI gates, evidence reports, and safe public claims.
+
+## Later enterprise work
+Staging validation, monitoring stack, backup/restore validation, rollback drills, SSO/SCIM integration, external audit, compliance certification, and customer-specific deployment hardening.

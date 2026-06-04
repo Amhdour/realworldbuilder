@@ -1,0 +1,25 @@
+# Evidence Index
+
+{% for e in evidence_index.evidence_items %}## {{ e.evidence_file }}
+- Claim supported: {{ e.claim_supported }}
+- Control supported: {{ e.control_supported }}
+- Source of evidence: {{ e.source_of_evidence }}
+- Reproducibility status: {{ e.reproducibility_status }}
+- Limitations: {{ e.limitations }}
+- Safe public wording: {{ e.safe_public_wording }}
+- Public/private classification: {{ e.public_private_classification }}
+- Reasons: {{ e.reasons }}
+- Evidence strength level: {{ e.evidence_strength_level }}
+- Manual review marker: {{ e.manual_review_marker }}
+{% endfor %}
+
+## Secret-safe reporting
+{% for s in evidence_index.secret_indicators %}- {{ s.file_path }}:{{ s.line_number }} {{ s.secret_type_guess }} {{ s.redacted_preview }} {{ s.severity }} {{ s.recommended_action }}
+{% else %}- No likely secret indicators found by Phase 1 heuristics.
+{% endfor %}
+
+## MVP / production-style portfolio work
+Local tests, demo attacks, CI gates, evidence reports, safe public claims.
+
+## Later enterprise work
+Staging validation, monitoring stack, rollback drills, external audit.

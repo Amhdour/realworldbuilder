@@ -1,0 +1,12 @@
+# Architecture Map
+
+{% for k,v in architecture_map.items() %}## {{ k }}
+{% if v %}{% for item in v %}- {{ item }}
+{% endfor %}{% else %}- {{ unconfirmed }}
+{% endif %}{% endfor %}
+
+## MVP / production-style portfolio work
+Local tests, demo attacks, CI gates, evidence reports, and safe public claims.
+
+## Later enterprise work
+Staging validation, monitoring stack, backup/restore validation, rollback drills, SSO/SCIM integration, external audit, compliance certification, customer-specific deployment hardening.

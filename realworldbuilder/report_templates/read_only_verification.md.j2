@@ -1,0 +1,14 @@
+# Read-only Verification
+
+- Changed during scan: {{ read_only_verification.changed_during_scan }}
+- Statement: {{ read_only_verification.statement }}
+- Before file count: {{ read_only_verification.before.file_count }}
+- After file count: {{ read_only_verification.after.file_count }}
+- Before directory count: {{ read_only_verification.before.directory_count }}
+- After directory count: {{ read_only_verification.after.directory_count }}
+
+## MVP / production-style portfolio work
+Keep scanning read-only and write outputs outside the target repository.
+
+## Later enterprise work
+Add CI evidence that proves read-only behavior over representative repositories.

@@ -1,0 +1,2 @@
+control: tool_authorization
+rule: require policy decision before tool execution

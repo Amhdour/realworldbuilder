@@ -1,0 +1,5 @@
+def generate_tasks(patches, gaps):
+    tasks=[]
+    for p in patches[:8]:
+        tasks.append({"objective":f"Add evidence-backed {p['control_name']} MVP control work.","files_to_inspect":p['candidate_files_or_folders'] or ["I cannot confirm this from the provided project."],"files_to_modify":["planned target files after manual review"],"implementation_steps":["Inspect candidate flow","Add minimal policy/enforcement hook","Add unit and negative tests","Generate evidence report"],"tests_to_add":p['required_tests'],"demo_attack_to_add":p['required_demo_attack'],"evidence_to_generate":p['required_evidence_file'],"acceptance_criteria":["tests pass","evidence file documents limitations","no enterprise or production claim is made"],"safe_claim_after_completion":"A specific control has implementation and local test evidence; runtime effectiveness still requires CI/staging validation.","risk_level":"medium","reason":p['threat_addressed'],"rollback_plan":"Revert the control patch and associated tests/evidence.","files_most_likely_affected":p['candidate_files_or_folders'],"tests_required_before_merge":p['required_tests']})
+    return tasks

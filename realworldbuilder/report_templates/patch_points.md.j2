@@ -1,0 +1,26 @@
+# Patch Points
+
+{% for p in patch_points.patch_points %}## {{ p.control_name }}
+- Threat addressed: {{ p.threat_addressed }}
+- Likely project layer: {{ p.likely_project_layer }}
+- Candidate files or folders: {{ p.candidate_files_or_folders }}
+- Confidence level: {{ p.confidence_level }}
+- Evidence currently found: {{ p.evidence_currently_found }}
+- Missing evidence: {{ p.missing_evidence }}
+- Implementation status: {{ p.implementation_status }}
+- Evidence strength level: {{ p.evidence_strength_level }}
+- Control maturity level: {{ p.control_maturity_level }}
+- Required tests: {{ p.required_tests }}
+- Required demo attack: {{ p.required_demo_attack }}
+- Required audit event: {{ p.required_audit_event }}
+- Required telemetry metric: {{ p.required_telemetry_metric }}
+- Required evidence file: {{ p.required_evidence_file }}
+- Safe public claim: {{ p.safe_public_claim }}
+- Manual review marker: {{ p.manual_review_marker }}
+{% endfor %}
+
+## MVP / production-style portfolio work
+{{ patch_points.mvp_production_style_portfolio_work }}
+
+## Later enterprise work
+{{ patch_points.later_enterprise_work }}

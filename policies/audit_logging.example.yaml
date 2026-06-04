@@ -1,0 +1,2 @@
+control: audit_logging
+rule: emit audit events for allow and deny decisions
